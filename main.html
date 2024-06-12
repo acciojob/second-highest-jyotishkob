@@ -9,17 +9,18 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			let narr = arr.sort(function(a, b){return a - b})
+			return narr[narr.length-2]
 			
 		}
 
 		function Main() {
-			var n = prompt("Enter the number of elements");
+			var n = promp("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr));
+			aler(secondHighest(arr));
 		}
 		Main();
 	</script>
