@@ -9,14 +9,16 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			if (arr.length===0 || arr.length === 1){
-				return "-Infinity"
-			}else{
-				let narr = arr.sort(function(a, b){return a - b})
-				return narr[narr.length-2]
-			}
-			
-			
+			let big= -Infinity
+			let sbig= -Infinity
+			for(let t of arr){
+			  if(t> big ){
+			    sbig=big
+			    big=t
+			  }else if(t>sbig){
+			    sbig=t
+			  }
+			}	
 		}
 
 		function Main() {
